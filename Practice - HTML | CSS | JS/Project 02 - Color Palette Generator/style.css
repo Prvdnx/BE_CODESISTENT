@@ -81,9 +81,14 @@ h1::after {
 }
 
 .palette-container {
-  display: grid;
+  /* display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr)); */
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .color-box {
@@ -141,5 +146,10 @@ h1::after {
 
   h1 {
     font-size: 1.5rem;
+  }
+
+  #generate-btn {
+    display: block;
+    margin: 0 auto 1.5rem auto;
   }
 }
