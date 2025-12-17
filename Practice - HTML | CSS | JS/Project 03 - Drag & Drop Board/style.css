@@ -1,3 +1,4 @@
+/* color variables */
 :root {
   --bg-color: #1a1f35;
   --text-dark: #2d3748;
@@ -9,12 +10,14 @@
   --accent: #3b82f6;
 }
 
+/* reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* body */
 body {
   font-family: sans-serif;
   background-color: var(--bg-color);
@@ -24,12 +27,14 @@ body {
   min-height: 100vh;
 }
 
+/* container */
 .container {
   text-align: center;
   width: 100%;
   padding: 1.2rem;
 }
 
+/* heading */
 h1 {
   color: var(--text-light);
   margin-bottom: 20px;
@@ -37,6 +42,7 @@ h1 {
   letter-spacing: 2px;
 }
 
+/* board */
 .board {
   display: flex;
   justify-content: space-around;
@@ -47,6 +53,7 @@ h1 {
   gap: 20px;
 }
 
+/* lists */
 .list {
   background-color: var(--list-bg);
   padding: 1rem;
@@ -66,6 +73,7 @@ h1 {
   background-color: var(--list-hover);
 }
 
+/* cards */
 .card {
   background-color: var(--card-bg);
   color: var(--text-dark);
@@ -83,6 +91,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* responsive design */
 @media (max-width: 768px) {
   .board {
     flex-direction: column;
