@@ -1,0 +1,145 @@
+/* reset & fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary: #667eea;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --radius: 0 20px 0 20px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--gradient);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 0 1.5rem 0 1.5rem;
+  padding: 1.8rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 0.4rem;
+  font: 700 1.75rem/1 "Inter", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #764ba2);
+  border-radius: 2px;
+}
+
+#generate-btn {
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+}
+
+#generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+}
+
+#generate-btn:active {
+  transform: translateY(0);
+}
+
+.palette-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+}
+
+.color-box {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.color-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.color {
+  height: 100px;
+  cursor: pointer;
+}
+
+.color-info {
+  background: #fff;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.hex-value {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+}
+
+.copy-btn {
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.copy-btn:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .palette-container {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+
+  .container {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
