@@ -8,7 +8,7 @@ A simple, interactive quiz game built with vanilla HTML, CSS, and JavaScript.
 
 ## Features
 
-- 5 multiple-choice questions covering general knowledge
+- Multiple-choice questions covering general knowledge
 - Real-time score tracking
 - Visual feedback for correct/incorrect answers
 - Progress bar showing quiz completion
