@@ -1,0 +1,100 @@
+/* reset & variables */
+:root {
+  --primary: #667eea;
+  --primary-hover: #5568d3;
+  --remove: #ef4444;
+  --remove-hover: #dc2626;
+  --bg-light: #f0f4ff;
+  --radius: 0 20px 0 20px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg-light);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* container */
+.app-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* input form */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+input { border: 2px solid #ddd; transition: border-color 0.2s; }
+input:focus { outline: none; border-color: var(--primary); }
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover { background: var(--primary-hover); }
+
+/* bookmark list */
+#bookmark-list { list-style: none; padding: 0; }
+
+#bookmark-list li {
+  background: #f9f9f9;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+#bookmark-list li:hover { transform: translateX(4px); }
+
+#bookmark-list a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#bookmark-list a:hover { text-decoration: underline; }
+
+#bookmark-list button {
+  background: var(--remove);
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+#bookmark-list button:hover { background: var(--remove-hover); }
