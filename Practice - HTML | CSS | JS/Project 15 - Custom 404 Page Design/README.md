@@ -35,3 +35,7 @@ Simply open `index.html` in your web browser.
 - HTML5
 - CSS3 (Gradients, Flexbox, Transitions, Transforms)
 - Poppins font family
+
+## Credits
+
+- 404 illustration from [Storyset](https://storyset.com/)
