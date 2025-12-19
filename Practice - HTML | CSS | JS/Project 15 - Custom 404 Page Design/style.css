@@ -1,61 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background-color: #111;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: sans-serif;
 }
 
+/* 404 image */
 img {
   width: 100%;
   max-width: 550px;
   margin-bottom: 1.5rem;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+/* heading */
+h1 { font-size: 2rem; margin-bottom: 1rem; }
 
+/* description */
 p {
   font-size: 1rem;
-  color: #aaa;
+  color: #f3e8ff;
   margin-bottom: 2rem;
 }
 
+/* button */
 a {
-  background-color: #3ecf8e;
-  color: #111;
+  background: #fff;
+  color: #667eea;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-weight: 700;
+  transition: all 0.3s;
 }
 
 a:hover {
-  background-color: #04fc8d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
+/* responsive */
 @media (max-width: 600px) {
-  img {
-    max-width: 400px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
+  img { max-width: 400px; }
+  h1 { font-size: 1.5rem; }
+  p { font-size: 0.9rem; }
 }
