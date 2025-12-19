@@ -9,9 +9,7 @@ The repository is organized into different sets based on the technology stack or
 ### 🌐 Web Development
 
 #### [Practice - HTML | CSS | JS](<./Practice - HTML | CSS | JS>)
-A curated collection of **16+ vanilla web development projects** designed to master the fundamentals without relying on frameworks.
-- **Projects include:** Quiz Game, Color Palette Generator, Drag & Drop Board, Expense Tracker, Github Finder, and more.
-- **Tech Stack:** HTML5, CSS3, Vanilla JavaScript (ES6+).
+A curated collection of **vanilla web development projects** designed to master the fundamentals without relying on frameworks.
 
 ### 📱 Mobile Development
 *(Coming Soon)*
