@@ -1,51 +1,38 @@
-const convertrForm = document.getElementById("converter-form");
+// dom elements
+const form = document.getElementById("converter-form");
 const fromCurrency = document.getElementById("from-currency");
 const toCurrency = document.getElementById("to-currency");
 const amountInput = document.getElementById("amount");
 const resultDiv = document.getElementById("result");
 
-window.addEventListener("load", fetchCurrencies)
+// event listeners
+window.addEventListener("load", fetchCurrencies);
+form.addEventListener("submit", convertCurrency);
 
-convertrForm.addEventListener("submit", convertCurrency)
-
+// fetch currencies
 async function fetchCurrencies() {
-    // https://api.exchangerate-api.com/v4/latest/USD
     const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
-    const data = await response.json()
-    // console.log(data);
+    const data = await response.json();
 
-    const currencyOptions = Object.keys(data.rates);
-    // console.log(currencyOptions);
-    currencyOptions.forEach(currency => {
-        const option1 = document.createElement("option");
-        option1.value = currency;
-        option1.textContent = currency;
-        fromCurrency.appendChild(option1);
-
-        const option2 = document.createElement("option");
-        option2.value = currency;
-        option2.textContent = currency;
-        toCurrency.appendChild(option2);
-    })
+    Object.keys(data.rates).forEach(currency => {
+        fromCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
+        toCurrency.innerHTML += `<option value="${currency}">${currency}</option>`;
+    });
 }
 
+// convert currency
 async function convertCurrency(e) {
     e.preventDefault();
 
     const amount = parseFloat(amountInput.value);
-    const fromCurrencyValue = fromCurrency.value;
-    const toCurrencyValue = toCurrency.value;
+    const from = fromCurrency.value;
+    const to = toCurrency.value;
 
-    if (amount <= 0) {
-        alert("Please enter a valid amount");
-        return;
-    }
+    if (amount <= 0) return alert("Please enter a valid amount");
 
-    const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrencyValue}`);
+    const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${from}`);
     const data = await response.json();
+    const converted = (amount * data.rates[to]).toFixed(2);
 
-    const rate = data.rates[toCurrencyValue];
-    const convertedAmount = (amount * rate).toFixed(2);
-
-    resultDiv.textContent = `${amount} ${fromCurrencyValue} = ${convertedAmount} ${toCurrencyValue}`;
+    resultDiv.textContent = `${amount} ${from} = ${converted} ${to}`;
 }
