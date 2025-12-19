@@ -1,6 +1,6 @@
 # HTML | CSS | JS Practice Projects
 
-A collection of modern web development projects built with vanilla HTML, CSS, and JavaScript.
+A collection of mini modern web development projects built with vanilla HTML, CSS, and JavaScript.
 
 ## Projects
 
