@@ -8,8 +8,7 @@ The repository is organized into different sets based on the technology stack or
 
 ### 🌐 Web Development
 
-#### [Practice - HTML | CSS | JS](<./Practice - HTML | CSS | JS>)
-A curated collection of **vanilla web development projects** designed to master the fundamentals without relying on frameworks. [View on web](https://prvdnxpractice.netlify.app/practice%20-%20html%20%7C%20css%20%7C%20js/)
+#### [Practice - HTML | CSS | JS](<./Practice - HTML | CSS | JS>) #### - A curated collection of **vanilla web development projects** designed to master the fundamentals without relying on frameworks. [View on web](https://prvdnxpractice.netlify.app/practice%20-%20html%20%7C%20css%20%7C%20js/)
 
 ### 📱 Mobile Development
 *(Coming Soon)*
