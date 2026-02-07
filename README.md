@@ -24,3 +24,7 @@ A curated collection of **vanilla web development projects** designed to master 
 ## Usage
 
 Navigate to a specific project directory to view its `README.md` for detailed running instructions. Some web projects can be run simply by opening the `index.html` file in your browser.
+
+> **Note:** This is a development sandbox - expect rough edges and work-in-progress code!
+
+---
